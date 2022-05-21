@@ -7,7 +7,7 @@ public class Spawn : MonoBehaviour
     [SerializeField] GameObject playerCharacter;
     [SerializeField] float delay;
 
-    private List<GameObject> characters;
+    public List<GameObject> characters;
     private float timer;
     private bool spawning = false;
     private int count;
@@ -23,7 +23,6 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (spawning && count <= characters.Count)
         {
             timer += Time.deltaTime;
@@ -47,7 +46,7 @@ public class Spawn : MonoBehaviour
             
     }
 
-    private void SpawnCharacter(GameObject character, bool controllable)
+    private GameObject SpawnCharacter(GameObject character, bool controllable)
     {
         character.transform.position = transform.position;
         if (!controllable)
@@ -55,7 +54,7 @@ public class Spawn : MonoBehaviour
             character.GetComponent<Memory>().SetClone();
         }
         character.SetActive(true);
-
+        return character;
     }
 
     public void AddCharacter(GameObject character)
@@ -67,8 +66,8 @@ public class Spawn : MonoBehaviour
     {
         foreach (GameObject spawned in characters)
         {
-            spawned.SetActive(false);
-            spawned.GetComponent<SpriteRenderer>().color = Color.white;
+            //Disable old versions
+            spawned.GetComponent<Memory>().Disactivate();
         }
         spawning = true;
         timer = 0f;

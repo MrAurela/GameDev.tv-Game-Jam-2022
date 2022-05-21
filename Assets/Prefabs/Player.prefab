@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8016253667718218379}
   - component: {fileID: 8016253667718218378}
   - component: {fileID: 8016253667718218382}
+  - component: {fileID: 381355009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +148,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   learn: 1
+--- !u!50 &381355009
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016253667718218377}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &6075859968709155822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,6 +223,10 @@ PrefabInstance:
     - target: {fileID: 4893665980018534552, guid: 422503c883d8c5d42a2a81e4e791c3c1, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893665980018534555, guid: 422503c883d8c5d42a2a81e4e791c3c1, type: 3}
+      propertyPath: m_Depth
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 422503c883d8c5d42a2a81e4e791c3c1, type: 3}

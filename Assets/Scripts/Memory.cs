@@ -9,9 +9,12 @@ public class Memory : MonoBehaviour
     private List<float> xMoves;
     private List<float> times;
     private List<bool> jumps;
+    private List<(float, Vector3)> path;
 
     private int timesCounter = 0;
     private float time = 0f;
+
+    private int tm = 0, tmMin = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +22,17 @@ public class Memory : MonoBehaviour
         xMoves = new List<float>();
         jumps = new List<bool>();
         times = new List<float>();
+        path = new List<(float, Vector3)>();
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
+
+        path.Add((time, transform.position));
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -55,11 +63,22 @@ public class Memory : MonoBehaviour
             }
 
         } else {
-            while (timesCounter < times.Count && times[timesCounter] < time)
+            /*while (timesCounter < times.Count && times[timesCounter] < time)
             {
                 GetComponent<CharacterController2D>().Move(xMoves[timesCounter]);
                 if (jumps[timesCounter]) GetComponent<CharacterController2D>().Jump();
                 timesCounter++;
+            }*/
+            tm = tmMin;
+            while (tm < path.Count && path[tm].Item1 <= time)
+            {
+                tm++;
+                tmMin++;
+            }
+            if (tm == path.Count) Disactivate();
+            else
+            {
+                transform.position = path[tm - 1].Item2;
             }
         }
     }
@@ -83,11 +102,34 @@ public class Memory : MonoBehaviour
         learn = false;
         time = 0;
         timesCounter = 0;
+        tm = 0;
+        tmMin = 0;
     }
 
     public bool IsControlled()
     {
         return learn;
+    }
+
+    public void Die()
+    {
+        Disactivate();
+        if (IsControlled())
+        {
+            Spawn spawn = FindObjectOfType<Spawn>();
+            spawn.AddCharacter(gameObject);
+            spawn.StartSpawning();
+        }
+    }
+
+    public void Disactivate()
+    {
+        gameObject.SetActive(false);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0.5f);
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
+
     }
 
 

@@ -88,7 +88,8 @@ public class CharacterController2D : MonoBehaviour
 
         velocity.y += Physics2D.gravity.y * Time.deltaTime;
 
-        transform.Translate(velocity * Time.deltaTime);
+        //transform.Translate(velocity * Time.deltaTime);
+        GetComponent<Rigidbody2D>().velocity = velocity;
 
 
         //Test collisions
