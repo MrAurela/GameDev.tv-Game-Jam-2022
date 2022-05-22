@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(bc.bounds.center, Vector2.down, bc.bounds.extents.y + 0.05f, 1 << LayerMask.NameToLayer("Obstacle"));
+        RaycastHit2D hit = Physics2D.Raycast(bc.bounds.center, Vector2.down, bc.bounds.extents.y + 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
 
         return hit.collider != null;
         //return groundedPoints.Count > 0;
