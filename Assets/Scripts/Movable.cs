@@ -36,10 +36,6 @@ public class Movable : MonoBehaviour
 
         if (state == State.movingUp && transform.position.y >= up.y) state = State.up;
         else if (state == State.movingDown && transform.position.y <= down.y) state = State.down;
-        else
-        {
-            Debug.Log(state + ", " + transform.position.y + ", " + up.y + ", " + down.y);
-        }
 
         switch (state) {
             case State.up:
