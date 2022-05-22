@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38b43fdcc77fca740a43cd607c753586
+guid: d363ae532075d1841960d68be7e282d3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_0
+      name: DIOTB_MainCharacterWalkt_0
       rect:
         serializedVersion: 2
         x: 48
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f51982d3b5b1f2641a5a0c1238f1dd57
-      internalID: -634068426
+      spriteID: 140e99c816e702547b0ec038ac881704
+      internalID: -2108983867
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_1
+      name: DIOTB_MainCharacterWalkt_1
       rect:
         serializedVersion: 2
         x: 176
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3efe41b0fce5d40b36dbbb654b9fb7
-      internalID: -989950299
+      spriteID: ca434a3b6ec75214ea56b89c581a2aae
+      internalID: 994561161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_2
+      name: DIOTB_MainCharacterWalkt_2
       rect:
         serializedVersion: 2
         x: 304
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2558c7b01727420458e2b7a96f9bdfb8
-      internalID: -1626248668
+      spriteID: e60d678376af3ed4a89448cd3b504fbb
+      internalID: -1990613768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_3
+      name: DIOTB_MainCharacterWalkt_3
       rect:
         serializedVersion: 2
         x: 432
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a763b18c037a5f47b138565d6d4adbb
-      internalID: 1884576481
+      spriteID: e3fcd491b9e7dbe4fb18e6be6dc12ae8
+      internalID: 2002815160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_4
+      name: DIOTB_MainCharacterWalkt_4
       rect:
         serializedVersion: 2
         x: 558
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4847eaa10d168347b75b47bfed911eb
-      internalID: -328975517
+      spriteID: 7d57ade2d0c02eb4d899e00fa78e399b
+      internalID: -2051599939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_5
+      name: DIOTB_MainCharacterWalkt_5
       rect:
         serializedVersion: 2
         x: 684
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29be02f6cc5c46d45b8be5a4027c2316
-      internalID: -357422145
+      spriteID: ecbb8a16f45f39e499b2abb4529eef4d
+      internalID: 1037552617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_6
+      name: DIOTB_MainCharacterWalkt_6
       rect:
         serializedVersion: 2
         x: 812
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94d61644ac910a24689b6524ac30514c
-      internalID: -1009211077
+      spriteID: 1ebd595c1b3261b4e89eec71bb268a95
+      internalID: -1973668607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Sheet_7
+      name: DIOTB_MainCharacterWalkt_7
       rect:
         serializedVersion: 2
         x: 940
@@ -277,8 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0225a6bb6420f4c47ad4fdcbde9f834c
-      internalID: -1947920360
+      spriteID: 2b23d7203a1669e499eaa1fa8334b486
+      internalID: 1401816868
       vertices: []
       indices: 
       edges: []
@@ -286,7 +286,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6ffede33a1dcbb0418640df5763f72e8
+    spriteID: 5e7694dcb0a2ef84196a64502297c4ab
     internalID: 0
     vertices: []
     indices: 
@@ -294,14 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DIOTB_MainCharacter-Sheet_1: -989950299
-      DIOTB_MainCharacter-Sheet_4: -328975517
-      DIOTB_MainCharacter-Sheet_7: -1947920360
-      DIOTB_MainCharacter-Sheet_5: -357422145
-      DIOTB_MainCharacter-Sheet_2: -1626248668
-      DIOTB_MainCharacter-Sheet_0: -634068426
-      DIOTB_MainCharacter-Sheet_3: 1884576481
-      DIOTB_MainCharacter-Sheet_6: -1009211077
+      DIOTB_MainCharacterWalkt_6: -1973668607
+      DIOTB_MainCharacterWalkt_7: 1401816868
+      DIOTB_MainCharacterWalkt_0: -2108983867
+      DIOTB_MainCharacterWalkt_5: 1037552617
+      DIOTB_MainCharacterWalkt_3: 2002815160
+      DIOTB_MainCharacterWalkt_2: -1990613768
+      DIOTB_MainCharacterWalkt_1: 994561161
+      DIOTB_MainCharacterWalkt_4: -2051599939
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96af341da2fdd7a489989b7a5f854f0f
+guid: 6efd3cc60d8882346a9bfe8fc7aff4a3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Originalt_0
+      name: DIOTB_MainCharacterOriginal_0
       rect:
         serializedVersion: 2
         x: 48
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adb7823624cea8e4393e80c35bcbaa69
-      internalID: 1000093074
+      spriteID: 9d7529d826724c84aac16dd95564c938
+      internalID: 1523585160
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d50ad667d76ba6a4197e98d7cf1a5a8c
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +147,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DIOTB_MainCharacter-Originalt_0: 1000093074
+      DIOTB_MainCharacterOriginal_0: 1523585160
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
