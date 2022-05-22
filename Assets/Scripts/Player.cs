@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public int numberOfJumps;
 
     private Rigidbody2D rb;
+    private Animator anim;
     private float verticalVelocity = 0f, horizontalVelocity = 0f;
     public int jumps;
     private bool grounded;
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -91,8 +93,15 @@ public class Player : MonoBehaviour
         }
 
         rb.velocity = new Vector3(horizontalVelocity, verticalVelocity, 0f);
-        //GetComponent<Animator>().SetFloat("Speed", horizontalVelocity);
+        
+        //Animation
+        anim.SetFloat("Speed", Mathf.Abs(horizontalVelocity));
 
+        //Turn when moving to either direction:
+        if (horizontalVelocity > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
+        else if (horizontalVelocity < 0f) transform.localScale = new Vector3(-1f, 1f, 1f);
+
+        Debug.Log("Should face left: " + (horizontalVelocity < 0f) + ". Faces Left: " + anim.GetBool("Faces Left"));
     }
 
     private void UpdateData()

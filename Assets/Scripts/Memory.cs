@@ -125,7 +125,7 @@ public class Memory : MonoBehaviour
     public void Disactivate()
     {
         gameObject.SetActive(false);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0.5f);
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 100f);
         //gameObject.GetComponent<Collider2D>().enabled = false;
         gameObject.layer = 11; //Ghost
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
