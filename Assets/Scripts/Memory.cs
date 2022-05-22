@@ -75,8 +75,8 @@ public class Memory : MonoBehaviour
                 tm++;
                 tmMin++;
             }
-            if (tm == path.Count) Disactivate();
-            else
+            if (tm == path.Count) Debug.Log("Disactivate here");//Disactivate();
+            else if (tm >= 1)
             {
                 transform.position = path[tm - 1].Item2;
             }
@@ -126,7 +126,8 @@ public class Memory : MonoBehaviour
     {
         gameObject.SetActive(false);
         gameObject.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0.5f);
-        gameObject.GetComponent<Collider2D>().enabled = false;
+        //gameObject.GetComponent<Collider2D>().enabled = false;
+        gameObject.layer = 11; //Ghost
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
 
 

@@ -105,7 +105,7 @@ public class CharacterController2D : MonoBehaviour
 
             string tag = hit.gameObject.tag;
 
-            if (tag == "Obstacle" || tag == "Player")
+            if (tag == "Obstacle")
             {
                 ColliderDistance2D colliderDistance = hit.Distance(collider);
                 if (colliderDistance.isOverlapped)
