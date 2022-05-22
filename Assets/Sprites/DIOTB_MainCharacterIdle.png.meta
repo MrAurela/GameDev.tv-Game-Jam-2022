@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4b4d8c453b3640468ef79e872f72f80
+guid: cd65d4814292a83449c7f51b80daa2cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Idle_0
+      name: DIOTB_MainCharacterIdle_0
       rect:
         serializedVersion: 2
         x: 48
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0e524aba3d2cf24db9cd6e21d0812ab
-      internalID: 1430814588
+      spriteID: 279cdd4c8683b9e4a8bf0de6dacdf086
+      internalID: 780586845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Idle_1
+      name: DIOTB_MainCharacterIdle_1
       rect:
         serializedVersion: 2
         x: 176
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e0df3fad65eb9941a1431d158d8fb37
-      internalID: 1027274891
+      spriteID: 5a2786740d672594c977a7c8910c40de
+      internalID: 1037257588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DIOTB_MainCharacter-Idle_2
+      name: DIOTB_MainCharacterIdle_2
       rect:
         serializedVersion: 2
         x: 304
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fa6e7c0f5337464eaa247d820cb2006
-      internalID: 761922784
+      spriteID: ef207dc626f4c144fbd6126470c5df08
+      internalID: 879668744
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f38b58db0e2a3004b99ef2af3d200355
+    spriteID: 0938b09afadc9164fbf3c6ca43ebf0eb
     internalID: 0
     vertices: []
     indices: 
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DIOTB_MainCharacter-Idle_0: 1430814588
-      DIOTB_MainCharacter-Idle_2: 761922784
-      DIOTB_MainCharacter-Idle_1: 1027274891
+      DIOTB_MainCharacterIdle_1: 1037257588
+      DIOTB_MainCharacterIdle_0: 780586845
+      DIOTB_MainCharacterIdle_2: 879668744
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
