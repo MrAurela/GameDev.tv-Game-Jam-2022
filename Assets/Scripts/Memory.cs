@@ -41,7 +41,7 @@ public class Memory : MonoBehaviour
 
         if (learn)
         {
-            bool jump = false;
+            /*bool jump = false;
             if (Input.GetButtonDown("Jump")) {
                 GetComponent<CharacterController2D>().Jump();
                 jump = true;
@@ -60,7 +60,7 @@ public class Memory : MonoBehaviour
             {
                 GetComponent<CharacterController2D>().Move(0f);
                 Add(0f, jump);
-            }
+            }*/
 
         } else {
             /*while (timesCounter < times.Count && times[timesCounter] < time)
@@ -75,7 +75,7 @@ public class Memory : MonoBehaviour
                 tm++;
                 tmMin++;
             }
-            if (tm == path.Count) Debug.Log("Disactivate here");//Disactivate();
+            if (tm == path.Count) Disactivate();
             else if (tm >= 1)
             {
                 transform.position = path[tm - 1].Item2;

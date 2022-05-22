@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
 
     private Vector2 velocity;
 
-    private bool grounded;
+    public bool grounded;
     private int jumps;
     private Memory memory;
 
@@ -93,7 +93,7 @@ public class CharacterController2D : MonoBehaviour
 
 
         //Test collisions
-        Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, collider.size, 0);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, collider.size *1.1f, 0);
 
 
         grounded = false;
@@ -108,16 +108,19 @@ public class CharacterController2D : MonoBehaviour
             if (tag == "Obstacle")
             {
                 ColliderDistance2D colliderDistance = hit.Distance(collider);
+
+                if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 45 && velocity.y < 0)
+                {
+                    grounded = true;
+                }
+
                 if (colliderDistance.isOverlapped)
                 {
                     Vector2 distance = colliderDistance.pointB - colliderDistance.pointA;
                     transform.Translate(-distance);
                     if (distance.y > 0) velocity.y = 0;
                 }
-                if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 90 && velocity.y < 0)
-                {
-                    grounded = true;
-                }
+                
             }
             
         }
