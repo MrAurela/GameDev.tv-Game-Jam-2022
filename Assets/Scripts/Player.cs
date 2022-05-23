@@ -40,8 +40,7 @@ public class Player : MonoBehaviour
             if (jumpStarted && jumps < numberOfJumps)
             {
                 //Jump
-                verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
-                jumps++;
+                Jump();
             }
             else if (!jump)
             {
@@ -59,18 +58,19 @@ public class Player : MonoBehaviour
             if (jumpStarted && jumps < numberOfJumps)
             {
                 //On air jump
-                verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
-                jumps++;
+                Jump();
             }
             else if (jump && verticalVelocity > 0f)
             {
                 //Gaining height:
                 verticalVelocity -= jumpGravity * Time.deltaTime;
+                anim.SetBool("Falling", false);
             }
             else
             {
                 //Falling:
                 verticalVelocity -= fallGravity * Time.deltaTime;
+                anim.SetBool("Falling", true);
             }
 
             verticalVelocity = Mathf.Clamp(verticalVelocity, -maxVerticalVelocity, maxVerticalVelocity);
@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
         
         //Animation
         anim.SetFloat("Speed", Mathf.Abs(horizontalVelocity));
+        anim.SetBool("Grounded", IsGrounded());
 
         //Turn when moving to either direction:
         if (horizontalVelocity > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
@@ -134,6 +135,13 @@ public class Player : MonoBehaviour
     {
         groundedPoints.Remove(collision);
         //grounded = false;
+    }
+
+    private void Jump()
+    {
+        anim.SetTrigger("Jump");
+        verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
+        jumps++;
     }
 
 
