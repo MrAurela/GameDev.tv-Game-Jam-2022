@@ -9,7 +9,7 @@ public class Memory : MonoBehaviour
     private List<float> xMoves;
     private List<float> times;
     private List<bool> jumps;
-    private List<(float, Vector3)> path;
+    private List<(float, Vector3, Vector3, Sprite)> path; //timestamp, position, scale, sprite;
 
     private int timesCounter = 0;
     private float time = 0f;
@@ -22,7 +22,7 @@ public class Memory : MonoBehaviour
         xMoves = new List<float>();
         jumps = new List<bool>();
         times = new List<float>();
-        path = new List<(float, Vector3)>();
+        path = new List<(float, Vector3, Vector3, Sprite)>();
 
 
     }
@@ -32,7 +32,7 @@ public class Memory : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        path.Add((time, transform.position));
+        path.Add((time, transform.position, transform.localScale, GetComponent<SpriteRenderer>().sprite));
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -69,6 +69,7 @@ public class Memory : MonoBehaviour
                 if (jumps[timesCounter]) GetComponent<CharacterController2D>().Jump();
                 timesCounter++;
             }*/
+
             tm = tmMin;
             while (tm < path.Count && path[tm].Item1 <= time)
             {
@@ -79,6 +80,8 @@ public class Memory : MonoBehaviour
             else if (tm >= 1)
             {
                 transform.position = path[tm - 1].Item2;
+                transform.localScale = path[tm - 1].Item3;
+                GetComponent<SpriteRenderer>().sprite = path[tm - 1].Item4;
             }
         }
     }
@@ -99,11 +102,16 @@ public class Memory : MonoBehaviour
 
     public void SetClone()
     {
+        GetComponent<Player>().enabled = false;
+        GetComponent<Animator>().enabled = false;
+        GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 0.5f);
+        gameObject.layer = 11; //Ghost
         learn = false;
         time = 0;
         timesCounter = 0;
         tm = 0;
         tmMin = 0;
+
     }
 
     public bool IsControlled()
@@ -125,9 +133,8 @@ public class Memory : MonoBehaviour
     public void Disactivate()
     {
         gameObject.SetActive(false);
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 100f);
+        //gameObject.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 0.5f);
         //gameObject.GetComponent<Collider2D>().enabled = false;
-        gameObject.layer = 11; //Ghost
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
 
 

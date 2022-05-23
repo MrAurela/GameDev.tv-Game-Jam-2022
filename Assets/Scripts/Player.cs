@@ -86,7 +86,6 @@ public class Player : MonoBehaviour
         if (horizontalVelocity > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
         else if (horizontalVelocity < 0f) transform.localScale = new Vector3(-1f, 1f, 1f);
 
-        Debug.Log("Grounded: " + IsGrounded());
         if (IsGrounded()) Debug.DrawRay(bc.bounds.center, Vector2.down * (bc.bounds.extents.y + 0.01f), Color.green);
         else Debug.DrawRay(bc.bounds.center, Vector2.down * (bc.bounds.extents.y + 0.01f), Color.red);
     }
