@@ -32,32 +32,53 @@ public class Movable : MonoBehaviour
     void Update()
     {
         rb.velocity = Vector3.zero;
-        if (!on) return;
 
-        if (state == State.movingUp && transform.position.y >= up.y) state = State.up;
-        else if (state == State.movingDown && transform.position.y <= down.y) state = State.down;
 
-        switch (state) {
-            case State.up:
-                {
-                    state = State.movingDown;
-                    break;
-                }
-            case State.down:
-                {
-                    state = State.movingUp;
-                    break;
-                }
-            case State.movingUp:
-                {
-                    rb.velocity = Vector3.up * upSpeed;
-                    break;
-                }
-            case State.movingDown:
-                {
-                    rb.velocity = -Vector3.up * downSpeed;
-                    break;
-                }
+
+        if (constantlyMoving && on)
+        {
+            if (state == State.movingUp && transform.position.y >= up.y) state = State.up;
+            else if (state == State.movingDown && transform.position.y <= down.y) state = State.down;
+
+            switch (state)
+            {
+                case State.up:
+                    {
+                        state = State.movingDown;
+                        break;
+                    }
+                case State.down:
+                    {
+                        state = State.movingUp;
+                        break;
+                    }
+                case State.movingUp:
+                    {
+                        rb.velocity = Vector3.up * upSpeed;
+                        break;
+                    }
+                case State.movingDown:
+                    {
+                        rb.velocity = -Vector3.up * downSpeed;
+                        break;
+                    }
+            }
+        }
+        else if (!constantlyMoving)
+        {
+            if (state == State.movingUp && transform.position.y >= up.y) state = State.up;
+            else if (state == State.movingDown && transform.position.y <= down.y) state = State.down;
+
+            if (state != State.down && (((startState == State.up && on) || (startState == State.down && !on))))
+            {
+                state = State.movingDown;
+                rb.velocity = -Vector3.up * downSpeed;
+            }
+            else if (state != State.up && (((startState == State.down && on) || (startState == State.up && !on))))
+            {
+                state = State.movingUp;
+                rb.velocity = Vector3.up * upSpeed;
+            }
 
         }
     }
