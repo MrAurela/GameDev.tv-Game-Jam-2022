@@ -6,6 +6,7 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] GameObject playerCharacter;
     [SerializeField] float delay;
+    [SerializeField] int maxCharacters;
 
     public List<GameObject> characters;
     private float timer;
@@ -64,6 +65,12 @@ public class Spawn : MonoBehaviour
 
     public void StartSpawning()
     {
+        while (characters.Count > 3)
+        {
+            Destroy(characters[0]);
+            characters.RemoveAt(0);
+        }
+
         foreach (GameObject spawned in characters)
         {
             //Disable old versions
