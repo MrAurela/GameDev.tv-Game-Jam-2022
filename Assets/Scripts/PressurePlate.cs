@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressurePlate : MonoBehaviour
 {
     [SerializeField] Movable[] controlledMovables;
+    [SerializeField] Sprite onSprite, offSprite;
 
     public List<Collider2D> collisions;
 
@@ -34,8 +35,8 @@ public class PressurePlate : MonoBehaviour
 
     public void SetOn(bool on)
     {
-        if (on) transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 0f);
-        else transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+        if (on) GetComponent<SpriteRenderer>().sprite = onSprite;
+        else GetComponent<SpriteRenderer>().sprite = offSprite;
 
         foreach (Movable movable in controlledMovables)
         {

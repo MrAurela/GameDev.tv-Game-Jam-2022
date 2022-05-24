@@ -155,6 +155,9 @@ MonoBehaviour:
   jumpGravity: 15
   fallGravity: 20
   maxVerticalVelocity: 20
+  dashTime: 0.1
+  dashLength: 8
+  dashCooldown: 1
   numberOfJumps: 2
   jumps: 0
 --- !u!114 &8016253667718218382
@@ -189,7 +192,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!95 &1851323843006606313
 Animator:
@@ -272,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4893665980018534555, guid: 422503c883d8c5d42a2a81e4e791c3c1, type: 3}
       propertyPath: orthographic size
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 422503c883d8c5d42a2a81e4e791c3c1, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float horizontalSpeed, jumpHeight, jumpGravity, fallGravity, maxVerticalVelocity;
+    public float horizontalSpeed, jumpHeight, jumpGravity, fallGravity, maxVerticalVelocity, dashTime, dashLength, dashCooldown;
     public int numberOfJumps;
 
     private Rigidbody2D rb;
@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     private float verticalVelocity = 0f, horizontalVelocity = 0f;
     public int jumps;
     private List<Collision2D> groundedPoints;
+    private float dashTimer;
+    private float dashDirection;
+    private float dashCooldownTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +33,28 @@ public class Player : MonoBehaviour
         // Check if jumped
         bool jump = Input.GetKey(KeyCode.Space);
         bool jumpStarted = Input.GetKeyDown(KeyCode.Space);
+        bool dashStarted = Input.GetKeyDown(KeyCode.LeftControl);
 
         // Calculate horizontal velocity
-        horizontalVelocity = Input.GetAxisRaw("Horizontal") * horizontalSpeed;
+        if (dashStarted && dashCooldownTimer <= 0f)
+        {
+            dashTimer = dashTime;
+            dashCooldownTimer = dashCooldown;
+
+            if (FacesLeft()) dashDirection = -1f;
+            else dashDirection = 1f;
+        }
+        if (dashTimer > 0f)
+        {
+            horizontalVelocity = dashDirection * (dashLength / dashTime);
+            Debug.Log(horizontalVelocity);
+            dashTimer -= Time.deltaTime;
+        }
+        else
+        {
+            horizontalVelocity = Input.GetAxisRaw("Horizontal") * horizontalSpeed;
+            if (dashCooldownTimer > 0f) dashCooldownTimer -= Time.deltaTime;
+        }
 
         if (IsGrounded())
         {
@@ -141,6 +163,11 @@ public class Player : MonoBehaviour
         anim.SetTrigger("Jump");
         verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
         jumps++;
+    }
+
+    private bool FacesLeft()
+    {
+        return transform.localScale.x < 0f;
     }
 
 
