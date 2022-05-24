@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class PressurePlate : MonoBehaviour
 {
@@ -32,6 +34,7 @@ public class PressurePlate : MonoBehaviour
         collisions.Remove(collision);
         if (collisions.Count == 0) SetOn(false);
     }
+
 
     public void SetOn(bool on)
     {
