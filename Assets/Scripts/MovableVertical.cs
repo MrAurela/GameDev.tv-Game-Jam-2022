@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movable : MonoBehaviour
+public class MovableVertical : Movable
 {
 
     [SerializeField] float upSpeed, downSpeed;
@@ -11,7 +11,7 @@ public class Movable : MonoBehaviour
 
     private Vector3[] positions;
 
-    public bool on;
+
     private Vector3 up, down;
 
     public enum State { up, down, movingUp, movingDown }
@@ -32,8 +32,6 @@ public class Movable : MonoBehaviour
     void Update()
     {
         rb.velocity = Vector3.zero;
-
-
 
         if (constantlyMoving && on)
         {
@@ -83,9 +81,6 @@ public class Movable : MonoBehaviour
         }
     }
 
-    public void SetOn(bool on)
-    {
-        this.on = on;
-    }
+   
 
 }
