@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private float dashDirection;
     private float dashCooldownTimer;
 
+    private Movable platform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +32,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Will be checked again each loop
+        platform = null;
+
         // Check if jumped
         bool jump = Input.GetKey(KeyCode.Space);
         bool jumpStarted = Input.GetKeyDown(KeyCode.Space);
@@ -97,8 +102,6 @@ public class Player : MonoBehaviour
 
             verticalVelocity = Mathf.Clamp(verticalVelocity, -maxVerticalVelocity, maxVerticalVelocity);
         }
-
-        rb.velocity = new Vector3(horizontalVelocity, verticalVelocity, 0f);
         
         //Animation
         anim.SetFloat("Speed", Mathf.Abs(horizontalVelocity));
@@ -107,6 +110,10 @@ public class Player : MonoBehaviour
         //Turn when moving to either direction:
         if (horizontalVelocity > 0f) transform.localScale = new Vector3(1f, 1f, 1f);
         else if (horizontalVelocity < 0f) transform.localScale = new Vector3(-1f, 1f, 1f);
+
+        
+        rb.velocity = new Vector3(horizontalVelocity, verticalVelocity, 0f);
+        if (platform != null) rb.velocity += platform.GetVelocity();
 
         if (IsGrounded()) Debug.DrawRay(bc.bounds.center, Vector2.down * (bc.bounds.extents.y + 0.01f), Color.green);
         else Debug.DrawRay(bc.bounds.center, Vector2.down * (bc.bounds.extents.y + 0.01f), Color.red);
@@ -117,7 +124,19 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(bc.bounds.center, Vector2.down, bc.bounds.extents.y + 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
 
-        return hit.collider != null;
+        //Connect to platform
+        if (hit.collider == null)
+        {
+            return false;
+        } else
+        {
+            Movable platform = hit.collider.gameObject.GetComponent<Movable>();
+            if (platform != null) this.platform = platform;
+
+            return true;
+        }
+
+        //return hit.collider != null;
         //return groundedPoints.Count > 0;
         //return grounded;
     }
@@ -169,6 +188,5 @@ public class Player : MonoBehaviour
     {
         return transform.localScale.x < 0f;
     }
-
 
 }

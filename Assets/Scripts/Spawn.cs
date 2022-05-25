@@ -65,10 +65,13 @@ public class Spawn : MonoBehaviour
 
     public void StartSpawning()
     {
-        while (characters.Count > 3)
+        Debug.Log("Characters: " + characters.Count);
+        while (characters.Count > maxCharacters)
         {
+            Debug.Log("Remove character");
             Destroy(characters[0]);
             characters.RemoveAt(0);
+            Debug.Log("Characters: " + characters.Count);
         }
 
         foreach (GameObject spawned in characters)
