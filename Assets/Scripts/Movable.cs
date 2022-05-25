@@ -10,4 +10,10 @@ public class Movable: MonoBehaviour
     {
         this.on = on;
     }
+
+    public Vector2 GetVelocity()
+    {
+        return GetComponent<Rigidbody2D>().velocity;
+    }
+
 }
