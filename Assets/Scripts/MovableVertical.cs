@@ -22,7 +22,7 @@ public class MovableVertical : Movable
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        on = startsOn;
+        //on = startsOn;
         state = startState;
         up = transform.GetChild(0).transform.position;
         down = transform.GetChild(1).transform.position;
@@ -33,7 +33,7 @@ public class MovableVertical : Movable
     {
         rb.velocity = Vector3.zero;
 
-        if (constantlyMoving && on)
+        if (constantlyMoving && on!=startsOn)
         {
             if (state == State.movingUp && transform.position.y >= up.y) state = State.up;
             else if (state == State.movingDown && transform.position.y <= down.y) state = State.down;
