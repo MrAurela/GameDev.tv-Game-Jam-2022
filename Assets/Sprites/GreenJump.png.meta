@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 102136bc0a424c9418466b05ea18edcf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 28
+        width: 36
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3af5aa14a3b2d4288c3c28a46b552f
+      internalID: -748630324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 28
+        width: 36
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5, y: 0.054054055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e97202e673a2f24b9fa6ce940f87518
+      internalID: -525111116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 28
+        width: 36
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ae6b84a5374d144b273fdaba1e1b11
+      internalID: 1288868497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 32
+        width: 34
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.078947365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e8bbb6f9a054f44f8edbf146d469b16
+      internalID: -819528237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_4
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 38
+        width: 32
+        height: 78
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07692308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6330dca11182165419267b2314127d06
+      internalID: -1049544949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_5
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 42
+        width: 34
+        height: 84
+      alignment: 9
+      pivot: {x: 0.5, y: 0.071428575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d75b6813f58f34193c6fb1216eb9e3
+      internalID: -1277993925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_6
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 36
+        width: 34
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07317073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10e2a93899e0364f90ff9b0aa9fccb5
+      internalID: 1292717331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_7
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 34
+        width: 36
+        height: 74
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c214b6743c3e74ea8d1af49c09791b
+      internalID: 613058766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_8
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 28
+        width: 36
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.055555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9522315e2434f4fbc69d609445daf6
+      internalID: 274163228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_9
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 26
+        width: 36
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa8a4b84a9a614fb41471e47fc34c0
+      internalID: -216272585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_10
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 28
+        width: 36
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86fd59aa26f1bf46b8cd40f8c7b23de
+      internalID: -2022399634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_11
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 28
+        width: 36
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08571429}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda482dde187e624d80c18b3a4d86c4d
+      internalID: -589431372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_12
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 28
+        width: 36
+        height: 72
+      alignment: 9
+      pivot: {x: 0.5, y: 0.083333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0a790eac6107748a4c437e54f32b69
+      internalID: -1116159210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DIOTB_HeroGreenJUMPGREEN2_13
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 28
+        width: 36
+        height: 76
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1bc7a2e945ec0449089f528ff9ccac
+      internalID: 2143759284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1fb0dd7d6d43be84e9f26121e40266ad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DIOTB_HeroGreenJUMPGREEN2_1: -525111116
+      DIOTB_HeroGreenJUMPGREEN2_7: 613058766
+      DIOTB_HeroGreenJUMPGREEN2_0: -748630324
+      DIOTB_HeroGreenJUMPGREEN2_10: -2022399634
+      DIOTB_HeroGreenJUMPGREEN2_6: 1292717331
+      DIOTB_HeroGreenJUMPGREEN2_5: -1277993925
+      DIOTB_HeroGreenJUMPGREEN2_13: 2143759284
+      DIOTB_HeroGreenJUMPGREEN2_4: -1049544949
+      DIOTB_HeroGreenJUMPGREEN2_8: 274163228
+      DIOTB_HeroGreenJUMPGREEN2_9: -216272585
+      DIOTB_HeroGreenJUMPGREEN2_11: -589431372
+      DIOTB_HeroGreenJUMPGREEN2_2: 1288868497
+      DIOTB_HeroGreenJUMPGREEN2_12: -1116159210
+      DIOTB_HeroGreenJUMPGREEN2_3: -819528237
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
