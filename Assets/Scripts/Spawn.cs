@@ -75,6 +75,12 @@ public class Spawn : MonoBehaviour
 
     public void StartSpawning()
     {
+        //Restart all platform positions when level is restarted
+        foreach (Movable plattform in FindObjectsOfType<Movable>())
+        {
+            plattform.Restart();
+        }
+
         while (characters.Count >= maxCharacters)
         {
             Destroy(characters[0]);

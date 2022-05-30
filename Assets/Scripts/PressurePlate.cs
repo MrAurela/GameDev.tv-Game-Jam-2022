@@ -10,11 +10,13 @@ public class PressurePlate : MonoBehaviour
     [SerializeField] Sprite onSprite, offSprite;
 
     public List<Collider2D> collisions;
+    private Vector3 startPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         collisions = new List<Collider2D>();
+        
     }
 
     // Update is called once per frame
@@ -46,4 +48,5 @@ public class PressurePlate : MonoBehaviour
             movable.SetOn(on);
         }
     }
+
 }

@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         // Check if jumped
         bool jump = Input.GetKey(KeyCode.Space);
         bool jumpStarted = Input.GetKeyDown(KeyCode.Space);
-        bool dashStarted = Input.GetKeyDown(KeyCode.LeftControl);
+        bool dashStarted = false; //Dash ability removed
 
         // Calculate horizontal velocity
         if (dashStarted && dashCooldownTimer <= 0f)
