@@ -40,7 +40,12 @@ public class PressurePlate : MonoBehaviour
 
     public void SetOn(bool on)
     {
-        if (on) GetComponent<SpriteRenderer>().sprite = onSprite;
+        FindObjectOfType<SoundManager>().PlayButtonPressed();
+
+        if (on)
+        {
+            GetComponent<SpriteRenderer>().sprite = onSprite;
+        }
         else GetComponent<SpriteRenderer>().sprite = offSprite;
 
         foreach (Movable movable in controlledMovables)

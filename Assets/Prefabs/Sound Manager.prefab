@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bg: {fileID: 8300000, guid: 3cf4b522947ac4d458b84ae12541fabe, type: 3}
+  death: {fileID: 8300000, guid: 8e69ec85d1c12b74fbc49502dcde5df5, type: 3}
+  win: {fileID: 8300000, guid: 1f461748d1998e0419efdc208344d9b8, type: 3}
+  jump: {fileID: 8300000, guid: 653b0c38481be3b4db289bdf03d07eb8, type: 3}
+  button: {fileID: 8300000, guid: 080dbfd68521c5e4687c48a880b56f3d, type: 3}
+  pull: {fileID: 8300000, guid: 6f87f67ffa9f0e4409ea5031f326bd63, type: 3}
 --- !u!82 &782322465
 AudioSource:
   m_ObjectHideFlags: 0

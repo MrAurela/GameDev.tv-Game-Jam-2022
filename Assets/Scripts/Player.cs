@@ -179,6 +179,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
+        FindObjectOfType<SoundManager>().PlayJump();
         anim.SetTrigger("Jump");
         verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
         jumps++;

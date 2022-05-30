@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioClip bg;
+    [SerializeField] AudioClip death, win, jump, button, pull;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,29 @@ public class SoundManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PlayDeath()
+    {
+        GetComponent<AudioSource>().PlayOneShot(death);
+    }
+
+    public void PlayWin()
+    {
+        GetComponent<AudioSource>().PlayOneShot(win);
+    }
+
+    public void PlayJump()
+    {
+        GetComponent<AudioSource>().PlayOneShot(jump);
+    }
+    public void PlayButtonPressed()
+    {
+        GetComponent<AudioSource>().PlayOneShot(button);
+    }
+
+    public void PlayObjectMoving()
+    {
+        GetComponent<AudioSource>().PlayOneShot(pull);
     }
 }
