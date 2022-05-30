@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8016253667718218382}
   - component: {fileID: 381355009}
   - component: {fileID: 1851323843006606313}
+  - component: {fileID: -6639819162651665112}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -80,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 780586845, guid: cd65d4814292a83449c7f51b80daa2cf, type: 3}
+  m_Sprite: {fileID: -368811541, guid: f1f0400a8a25d3a4ba8a075c0b92d4bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2.3125}
+  m_Size: {x: 1.0625, y: 2.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -107,9 +108,9 @@ BoxCollider2D:
   m_Offset: {x: 0.03438063, y: 1.0510303}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 2.3125}
-    newSize: {x: 1, y: 2.3125}
+    pivot: {x: 0.5, y: 0.07317073}
+    oldSize: {x: 1.0625, y: 2.5625}
+    newSize: {x: 1.0625, y: 2.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -214,6 +215,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6639819162651665112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016253667718218377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcf1f98be64e404e9fa8d8d46f76f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: Blue
+  animationColor: Blue
 --- !u!1001 &6075859968709155822
 PrefabInstance:
   m_ObjectHideFlags: 0
