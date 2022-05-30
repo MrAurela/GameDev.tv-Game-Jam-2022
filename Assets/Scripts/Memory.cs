@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Memory : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class Memory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SetClone();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         if (learn)
