@@ -10,7 +10,7 @@ public class Goal : MonoBehaviour
         Player player = collision.GetComponent<Player>();
         if (player != null)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCount);
             FindObjectOfType<SoundManager>().PlayWin();
         }
     }
