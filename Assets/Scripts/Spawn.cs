@@ -7,6 +7,8 @@ public class Spawn : MonoBehaviour
     [SerializeField] GameObject playerCharacter;
     [SerializeField] float delay;
     [SerializeField] string[] characterColors;
+    [SerializeField] Transform spawnPosition;
+
     //[SerializeField] int maxCharacters;
 
     public List<GameObject> characters;
@@ -36,7 +38,7 @@ public class Spawn : MonoBehaviour
             {
                 if (count == characters.Count)
                 {
-                    GameObject instantiated = Instantiate(playerCharacter, transform.position, Quaternion.identity);
+                    GameObject instantiated = Instantiate(playerCharacter, spawnPosition.position, Quaternion.identity);
                     SpawnCharacter(instantiated, true);
                     count++;
                     timer = 0f;
@@ -54,7 +56,7 @@ public class Spawn : MonoBehaviour
 
     private GameObject SpawnCharacter(GameObject character, bool controllable)
     {
-        character.transform.position = transform.position;
+        character.transform.position = spawnPosition.position;
         if (!controllable)
         {
             character.GetComponent<Memory>().SetClone();
@@ -75,11 +77,7 @@ public class Spawn : MonoBehaviour
 
     public void StartSpawning()
     {
-        //Restart all platform positions when level is restarted
-        foreach (Movable plattform in FindObjectsOfType<Movable>())
-        {
-            plattform.Restart();
-        }
+        
 
         while (characters.Count >= maxCharacters)
         {
@@ -95,5 +93,11 @@ public class Spawn : MonoBehaviour
         spawning = true;
         timer = 0f;
         count = 0;
+
+        //Restart all platform positions when level is restarted
+        foreach (Movable plattform in FindObjectsOfType<Movable>())
+        {
+            plattform.Restart();
+        }
     }
 }
