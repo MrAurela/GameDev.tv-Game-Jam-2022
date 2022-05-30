@@ -46,5 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 8016253667718218377, guid: 54b8bfb09d2efc24a9bf14c7ac8370ea, type: 3}
   delay: 1
-  maxCharacters: 3
+  characterColors:
+  - Red
+  - Grey
+  - Blue
   characters: []

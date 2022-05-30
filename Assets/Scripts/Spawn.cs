@@ -6,16 +6,21 @@ public class Spawn : MonoBehaviour
 {
     [SerializeField] GameObject playerCharacter;
     [SerializeField] float delay;
-    [SerializeField] int maxCharacters;
+    [SerializeField] string[] characterColors;
+    //[SerializeField] int maxCharacters;
 
     public List<GameObject> characters;
     private float timer;
     private bool spawning = false;
     private int count;
 
+    private int maxCharacters = 0;
+    private int characterColorIndex = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        maxCharacters = characterColors.Length;
         characters = new List<GameObject>();
         StartSpawning();
         timer = 0f;
@@ -53,6 +58,11 @@ public class Spawn : MonoBehaviour
         if (!controllable)
         {
             character.GetComponent<Memory>().SetClone();
+        } else
+        {
+            Debug.Log(characters.Count);
+            character.GetComponent<ReskinAnimation>().SetAnimationColor(characterColors[characterColorIndex]);
+            characterColorIndex = (characterColorIndex + 1) % maxCharacters;
         }
         character.SetActive(true);
         return character;
@@ -65,13 +75,10 @@ public class Spawn : MonoBehaviour
 
     public void StartSpawning()
     {
-        Debug.Log("Characters: " + characters.Count);
-        while (characters.Count > maxCharacters)
+        while (characters.Count >= maxCharacters)
         {
-            Debug.Log("Remove character");
             Destroy(characters[0]);
             characters.RemoveAt(0);
-            Debug.Log("Characters: " + characters.Count);
         }
 
         foreach (GameObject spawned in characters)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 57bcf753b2bef7148bd1a982fc470c98
+guid: 15508af587bf1ae44b6b49a60d979f67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,10 +116,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GreyIdle1
+      name: RedIdle_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 48
         y: 160
         width: 32
         height: 74
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b024f71721345e540b0191650ca388ef
-      internalID: 1910996981
+      spriteID: c0dd35985ac632c4cb82fb4fbe6d27ca
+      internalID: 1344067950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrayIdle2
+      name: RedIdle_2
       rect:
         serializedVersion: 2
         x: 304
@@ -145,20 +145,20 @@ TextureImporter:
         width: 32
         height: 74
       alignment: 9
-      pivot: {x: 0.5, y: 0.02702703}
+      pivot: {x: 0.5, y: 0.027027028}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6aa8d4b82c23e94786671f96f9c8a65
-      internalID: 1379916507
+      spriteID: 2b751d5cd424a1b44bb4da72a3046285
+      internalID: -1991431335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GrayIdle3
+      name: RedIdle_3
       rect:
         serializedVersion: 2
         x: 560
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbe550070e540a44d9941cba27ae9366
-      internalID: 775639248
+      spriteID: f40bed2f29151f24f826110cff6e18e9
+      internalID: 956260949
       vertices: []
       indices: 
       edges: []
@@ -181,7 +181,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 577356c351450da46877e64d7cbdf74b
+    spriteID: 655c51af166cd7848a47ec8926535d88
     internalID: 0
     vertices: []
     indices: 
@@ -189,9 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GrayIdle3: 775639248
-      GreyIdle1: 1910996981
-      GrayIdle2: 1379916507
+      RedIdle_1: 1344067950
+      RedIdle_2: -1991431335
+      RedIdle_3: 956260949
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
