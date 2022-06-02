@@ -35,11 +35,6 @@ public class Memory : MonoBehaviour
 
         path.Add((time, transform.position, transform.localScale, GetComponent<SpriteRenderer>().sprite));
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
         if (learn)
         {
             /*bool jump = false;
