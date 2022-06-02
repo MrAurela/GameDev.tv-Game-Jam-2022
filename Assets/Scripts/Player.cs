@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     private float dashDirection;
     private float dashCooldownTimer;
 
+    [SerializeField] private Transform groundCheck01, groundCheck02;
+    
     private Movable platform;
 
     // Start is called before the first frame update
@@ -122,15 +124,25 @@ public class Player : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D hit = Physics2D.Raycast(bc.bounds.center, Vector2.down, bc.bounds.extents.y + 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
+        //RaycastHit2D hit01 = Physics2D.Raycast(bc.bounds.center, Vector2.down, bc.bounds.extents.y + 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
+        RaycastHit2D hit01 = Physics2D.Raycast(groundCheck01.position, Vector2.down, 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
+        RaycastHit2D hit02 = Physics2D.Raycast(groundCheck02.position, Vector2.down, 0.1f, 1 << LayerMask.NameToLayer("Obstacle"));
 
         //Connect to platform
-        if (hit.collider == null)
+        if (hit01.collider == null && hit02.collider == null)
         {
             return false;
-        } else
+        } 
+        else
         {
-            Movable platform = hit.collider.gameObject.GetComponent<Movable>();
+            Movable platform = null;
+            
+            if(hit01.collider != null) 
+                platform = hit01.collider.gameObject.GetComponent<Movable>();
+            
+            if(hit02.collider != null && platform == null)
+                platform = hit02.collider.gameObject.GetComponent<Movable>();
+            
             if (platform != null) this.platform = platform;
 
             return true;
@@ -179,7 +191,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        FindObjectOfType<SoundManager>().PlayJump();
+        FindObjectOfType<SoundManager>()?.PlayJump();
         anim.SetTrigger("Jump");
         verticalVelocity = Mathf.Sqrt(2.0f * jumpGravity * jumpHeight);
         jumps++;

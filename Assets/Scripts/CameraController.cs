@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Transform transform = FindObjectOfType<Player>().transform;
+        Transform transform = FindObjectOfType<Player>()?.transform;
         if (transform != null)
         {
             virtualCamera.Follow = transform;
