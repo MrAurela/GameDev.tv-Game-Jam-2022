@@ -40,7 +40,7 @@ public class PressurePlate : MonoBehaviour
 
     public void SetOn(bool on)
     {
-        FindObjectOfType<SoundManager>().PlayButtonPressed();
+        FindObjectOfType<SoundManager>()?.PlayButtonPressed();
 
         if (on)
         {
