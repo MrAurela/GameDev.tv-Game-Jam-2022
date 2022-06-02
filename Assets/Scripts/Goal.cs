@@ -15,12 +15,12 @@ public class Goal : MonoBehaviour
            
             if (!death)
             {
-                FindObjectOfType<SoundManager>().PlayWin();
+                FindObjectOfType<SoundManager>()?.PlayWin();
                 SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings);
             }
             else
             {
-                FindObjectOfType<SoundManager>().PlayDeath();
+                FindObjectOfType<SoundManager>()?.PlayDeath();
                 SceneManager.LoadScene((5));
             }
         }

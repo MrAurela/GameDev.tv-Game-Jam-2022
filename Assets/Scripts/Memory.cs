@@ -122,7 +122,7 @@ public class Memory : MonoBehaviour
 
     public void Die()
     {
-        FindObjectOfType<SoundManager>().PlayDeath();
+        FindObjectOfType<SoundManager>()?.PlayDeath();
         Disactivate();
         if (IsControlled())
         {
